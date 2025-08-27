@@ -1,0 +1,5 @@
+{
+  "name": "Cash Opname Taman Kyai Langgeng",
+  "description": "A simple web application to perform cash opname (cash counting and reconciliation) for Taman Kyai Langgeng Magelang.",
+  "requestFramePermissions": []
+}
