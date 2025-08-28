@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface DenominationRowProps {
@@ -17,7 +16,7 @@ const DenominationRow: React.FC<DenominationRowProps> = ({ denomination, quantit
   const subtotal = denomination * quantity;
 
   return (
-    <tr className="border-b border-slate-200">
+    <tr className="border-b border-slate-200" data-testid={`denom-row-${denomination}`}>
       <td className="p-3 text-slate-700 font-medium text-left">
         {currencyFormatter(denomination)}
       </td>
@@ -29,6 +28,7 @@ const DenominationRow: React.FC<DenominationRowProps> = ({ denomination, quantit
           placeholder="0"
           className="w-full rounded-md border border-slate-300 p-2 text-center shadow-sm focus:border-indigo-500 focus:ring-indigo-500 transition"
           min="0"
+          aria-label={`Jumlah untuk ${denomination}`}
         />
       </td>
       <td className="p-3 text-slate-800 font-semibold text-right w-48">
